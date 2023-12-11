@@ -1,7 +1,7 @@
-package lt.giedre.pom.test.varleTest;
+package lt.artiom.pom.test.varleTest;
 
-import lt.giedre.pom.page.varlePage.RegistracionPage;
-import lt.giedre.pom.test.BaseTest;
+import lt.artiom.pom.page.varlePage.RegistracionPage;
+import lt.artiom.pom.test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,8 +16,8 @@ public class RegistracionTest extends BaseTest {
 
     @Test
     public void registerWithExistingUserEmail() {
-        String emailAdress = "mokinys90123@gmail.com";
-        String password = "M@kinys123*";
+        String emailAdress = "artiom.fomichiovqa@gmail.com";
+        String password = "abcd12321";
         String expectedResult = "A user is already registered with this e-mail address.";
         String actualResult;
         RegistracionPage.clickOnTheLogInIcon();

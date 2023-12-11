@@ -1,4 +1,4 @@
-package lt.giedre.pom.page;
+package lt.artiom.pom.page;
 
 import org.openqa.selenium.By;
 
@@ -34,13 +34,23 @@ public class Locators {
                     "//div[@class='grid three-in-row flexible-height-mobile ']//div[@class='GRID_ITEM']");
         }
 
-        public class Cart {
-            public static By searchField = By.xpath("//input[@placeholder='Paieška']");
-            public static By arrowSearch = By.xpath("//img[@alt='search']");
+        public class ChangeSizes {
+            public static By secondSearchField = By.xpath("//input[@placeholder='Paieška']");
             public static By itemImg = By.xpath(
-                    "(//img[@alt='Jaguar Stance EDT tualetinis vanduo vyrams, 100 ml'])[2]");
+                    "//img[@class='product-img primary-img']");
             public static By clickAddToCart = By.xpath("(//img[@alt='add to cart'])[1]");
-            public static By clickOnButtonContinue = By.xpath("//button[@class='secondary-button']");
+            public static By clickAddToFavourites = By.xpath("//div[contains(@class, 'PRODUCT_SHORTCUTS')]//span[contains(@class, 'product-like')]");
+            public static By clickRemoveAddFromFavourites = By.xpath("//span[@class='product-like active']");
+            public static By clickOnButtonContinue = By.xpath("//div[@class='popup-content']//button[@class='secondary-button']");
+            public static By clickOnButtonBuy = By.xpath("//div[@class='popup-content']//button[@class='primary-button']");
+            public static By checkCartStatus = By.xpath(
+                    "//span[@class='cart-items']//span[@class='item-amount']");
+            public static By favouritesSize = By.xpath(
+                    "//div[contains(@class, 'wishlist-items')]//span[@class='item-amount']");
+            public static By acceptMandatoryCokies = By.xpath(
+                    "//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']");
+            public static By errorMessage = By.xpath("//div[@class='error-message-box']");
+            public static By favourites = By.xpath("//span[@class='wishlist-items']");
         }
 
     }

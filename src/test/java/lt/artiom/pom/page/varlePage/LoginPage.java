@@ -1,7 +1,7 @@
-package lt.giedre.pom.page.varlePage;
+package lt.artiom.pom.page.varlePage;
 
-import lt.giedre.pom.page.Common;
-import lt.giedre.pom.page.Locators;
+import lt.artiom.pom.page.Common;
+import lt.artiom.pom.page.Locators;
 
 public class LoginPage {
     public static void open() {
@@ -10,11 +10,11 @@ public class LoginPage {
     }
 
     public static void loginToSite() {
-        String emailAdress = "mokinys90123@gmail.com";
-        String password = "M@kinys123*";
+        String emailAddress = "artiom.fomichiovqa@gmail.com";
+        String password = "abcd12321";
         LoginPage.open();
         LoginPage.clickOnTheLogInIcon();
-        LoginPage.clickOnFieldAndSendEmail(emailAdress);
+        LoginPage.clickOnFieldAndSendEmail(emailAddress);
         LoginPage.clickOnFieldAndSendPassword(password);
         LoginPage.clickOnButtonLogin();
     }
@@ -48,6 +48,12 @@ public class LoginPage {
     public static String checkIfCorrectEmailAppears() {
         return Common.getTextFromElement(
                 Locators.Varle.Login.nameBlock
+        );
+    }
+
+    public static String checkIfErrorMessageAppears() {
+        return Common.getTextFromElement(
+                Locators.Varle.ChangeSizes.errorMessage
         );
     }
 }

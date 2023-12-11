@@ -1,18 +1,17 @@
 package lt.artiom.pom.test.varleTest;
 
-import lt.artiom.pom.page.Common;
-import lt.artiom.pom.page.varlePage.CartPage;
+import lt.artiom.pom.page.varlePage.ChangingSizesPage;
 import lt.artiom.pom.test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CartTest extends BaseTest {
+public class ChangingSizesTest extends BaseTest {
 
     @BeforeMethod
     @Override
     public void setUp() {
-        CartPage.open();
+        ChangingSizesPage.open();
     }
 
     @Test
@@ -20,12 +19,12 @@ public class CartTest extends BaseTest {
         String item = "Jaguar Stance EDT tualetinis vanduo vyrams, 100 ml";
         String expectedResult = "1";
         String actualResult;
-        CartPage.clickOnSearchFieldAndEnterText(item);
-        CartPage.clickOnSearchButton();
-        CartPage.acceptCookies();
-        CartPage.clickOnImage();
-        CartPage.addItemIntoCart();
-        actualResult = CartPage.getCartSize();
+        ChangingSizesPage.clickOnSearchFieldAndEnterText(item);
+        ChangingSizesPage.clickOnSearchButton();
+        ChangingSizesPage.acceptCookies();
+        ChangingSizesPage.clickOnImage();
+        ChangingSizesPage.addItemIntoCart();
+        actualResult = ChangingSizesPage.getCartSize();
         Assert.assertEquals(actualResult, expectedResult);
     }
 
@@ -34,14 +33,14 @@ public class CartTest extends BaseTest {
         String secondItem = "Jaguar Stance EDT tualetinis vanduo vyrams, 100 ml";
         String expectedResult = "1";
         String actualResult;
-        CartPage.clickOnSearchFieldEnterText(secondItem);
-        CartPage.clickOnSearchButton();
-        CartPage.acceptCookies();
-        CartPage.clickOnImage();
-        CartPage.addItemToFavourites();
-        CartPage.clickOnFavourites();
-        actualResult = CartPage.getFavouritesSize();
+        ChangingSizesPage.clickOnSearchFieldEnterText(secondItem);
+        ChangingSizesPage.clickOnSearchButton();
+        ChangingSizesPage.acceptCookies();
+        ChangingSizesPage.clickOnImage();
+        ChangingSizesPage.addItemToFavourites();
+        ChangingSizesPage.clickOnFavourites();
+        actualResult = ChangingSizesPage.getFavouritesSize();
         Assert.assertEquals(actualResult, expectedResult);
-        CartPage.removeItemFromFavourites();
+        ChangingSizesPage.removeItemFromFavourites();
     }
 }

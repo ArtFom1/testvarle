@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation test" parallel="methods" thread-count="1">
+    <test name="Varle.lt">
+        <classes>
+            <class name="lt.artiom.pom.test.varleTest.LoginTest"></class>
+            <class name="lt.artiom.pom.test.varleTest.SearchTest"></class>
+            <class name="lt.artiom.pom.test.varleTest.ChangingSizesTest"></class>
+            <class name="lt.artiom.pom.test.varleTest.RegistracionTest"></class>
+        </classes>
+    </test>
+</suite>
+

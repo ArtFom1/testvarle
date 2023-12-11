@@ -1,7 +1,7 @@
-package lt.giedre.pom.page.varlePage;
+package lt.artiom.pom.page.varlePage;
 
-import lt.giedre.pom.page.Common;
-import lt.giedre.pom.page.Locators;
+import lt.artiom.pom.page.Common;
+import lt.artiom.pom.page.Locators;
 
 import java.util.List;
 

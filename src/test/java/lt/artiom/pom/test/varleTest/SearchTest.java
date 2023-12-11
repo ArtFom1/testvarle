@@ -1,7 +1,7 @@
-package lt.giedre.pom.test.varleTest;
+package lt.artiom.pom.test.varleTest;
 
-import lt.giedre.pom.page.varlePage.SearchPage;
-import lt.giedre.pom.test.BaseTest;
+import lt.artiom.pom.page.varlePage.SearchPage;
+import lt.artiom.pom.test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

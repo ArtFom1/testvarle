@@ -1,6 +1,6 @@
-package lt.giedre.pom.page;
+package lt.artiom.pom.page;
 
-import lt.giedre.pom.utilities.Driver;
+import lt.artiom.pom.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,12 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
+
     public static void quitWebDriver() {
-//        Driver.quitWebDriver();
+        Driver.quitWebDriver();
     }
 
     public static void setUpCromeDriver() {
         Driver.setChromeDriver();
+        Driver.getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public static void openUrl(String url) {
@@ -33,15 +35,15 @@ public class Common {
 
     public static void clickOnFieldAndEnterInput(By locator, String input) {
         getElement(locator).sendKeys(input);
-
     }
 
     public static String getTextFromElement(By locator) {
+        waitForElements(locator);
         return getElement(locator).getText();
     }
 
     public static void waitForElements(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getWebDriver(), Duration.ofSeconds(8));
+        WebDriverWait wait = new WebDriverWait(Driver.getWebDriver(), Duration.ofSeconds(12));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 

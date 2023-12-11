@@ -1,4 +1,4 @@
-package lt.giedre.pom.utilities;
+package lt.artiom.pom.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -23,8 +23,9 @@ public class Driver {
         return webDriver;
     }
 
-//    public static void quitWebDriver() {
-//        webDriver.quit();
-//    }
+
+    public static void quitWebDriver() {
+        webDriver.quit();
+    }
 
 }

@@ -2,18 +2,15 @@ package lt.artiom.pom.page.varlePage;
 
 import lt.artiom.pom.page.Common;
 import lt.artiom.pom.page.Locators;
-import lt.artiom.pom.utilities.Driver;
 
-import java.util.concurrent.TimeUnit;
-
-public class CartPage {
+public class ChangingSizesPage {
     public static void open() {
         LoginPage.loginToSite();
     }
 
     public static void clickOnSearchFieldAndEnterText(String item) {
         Common.clickOnFieldAndEnterInput(
-                Locators.Varle.Cart.secondSearchField,
+                Locators.Varle.ChangeSizes.secondSearchField,
                 item
         );
     }
@@ -27,98 +24,61 @@ public class CartPage {
 
     public static void clickOnImage() {
         Common.clickOnElement(
-                Locators.Varle.Cart.itemImg
+                Locators.Varle.ChangeSizes.itemImg
         );
     }
 
     public static void clickOnFavourites() {
         Common.clickOnElement(
-                Locators.Varle.Cart.favourites
+                Locators.Varle.ChangeSizes.favourites
         );
     }
 
     public static void addItemIntoCart() {
         Common.clickOnElement(
-                Locators.Varle.Cart.clickAddToCart
+                Locators.Varle.ChangeSizes.clickAddToCart
         );
         Common.waitForElements(
-                Locators.Varle.Cart.clickOnButtonBuy);
+                Locators.Varle.ChangeSizes.clickOnButtonBuy);
         Common.clickOnElement(
-                Locators.Varle.Cart.clickOnButtonContinue
-        );
-    }
-
-    public static void addItemIntoCartAndBuy() {
-        Common.clickOnElement(
-                Locators.Varle.Cart.clickAddToCart
-        );
-
-        Common.waitForElements(
-                Locators.Varle.Cart.clickOnButtonBuy);
-
-        Common.clickOnElement(
-                Locators.Varle.Cart.clickOnButtonBuy
+                Locators.Varle.ChangeSizes.clickOnButtonContinue
         );
     }
 
     public static void addItemToFavourites() {
         Common.clickOnElement(
-                Locators.Varle.Cart.clickAddToFavourites
+                Locators.Varle.ChangeSizes.clickAddToFavourites
         );
     }
+
     public static void removeItemFromFavourites() {
         Common.clickOnElement(
-                Locators.Varle.Cart.clickRemoveAddFromFavourites
+                Locators.Varle.ChangeSizes.clickRemoveAddFromFavourites
         );
     }
 
     public static String getCartSize() {
         return Common.getTextFromElement(
-                Locators.Varle.Cart.checkCartStatus
+                Locators.Varle.ChangeSizes.checkCartStatus
         );
     }
 
     public static void acceptCookies() {
         Common.clickOnElement(
-                Locators.Varle.Cart.acceptMandatoryCokies
+                Locators.Varle.ChangeSizes.acceptMandatoryCokies
         );
     }
 
     public static void clickOnSearchFieldEnterText(String secondItem) {
         Common.clickOnFieldAndEnterInput(
-                Locators.Varle.Cart.secondSearchField,
+                Locators.Varle.ChangeSizes.secondSearchField,
                 secondItem
-        );
-    }
-
-    public static void clickOnCart() {
-        Common.waitForElements(
-                Locators.Varle.Cart.clickOnCartIcon);
-        Common.clickOnElement(
-                Locators.Varle.Cart.clickOnCartIcon
-        );
-
-        Driver.getWebDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    public static void clickOnRemoveIcon() {
-        Common.waitForElements(
-                Locators.Varle.Cart.clickRemoveIcon
-        );
-        Common.clickOnElement(
-                Locators.Varle.Cart.clickRemoveIcon
-        );
-    }
-
-    public static String cartSizeAfterRemoving() {
-        return Common.getTextFromElement(
-                Locators.Varle.Cart.checkCartStatus
         );
     }
 
     public static String getFavouritesSize() {
         return Common.getTextFromElement(
-                Locators.Varle.Cart.favouritesSize
+                Locators.Varle.ChangeSizes.favouritesSize
         );
     }
 }
